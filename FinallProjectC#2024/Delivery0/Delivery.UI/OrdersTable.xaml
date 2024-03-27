@@ -1,0 +1,39 @@
+﻿<Window x:Class="Delivery.UI.OrdersTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delivery.UI"
+        mc:Ignorable="d"
+        Title="OrdersTable" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <DataGrid x:Name="orderItemDataGrid" Margin="10,10,10,192" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="User ID" Binding="{Binding UserId}" />
+                <DataGridTextColumn Header="Order ID" Binding="{Binding OrdersId}" />
+                <DataGridTextColumn Header="Dish Name" Binding="{Binding NameDish}" />
+                <DataGridTextColumn Header="Order Date" Binding="{Binding OrderDate}" />
+                <DataGridTextColumn Header="Dish Price" Binding="{Binding DishPrice}" />
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Orders.status.Name}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="UserPhoneTxtBox" HorizontalAlignment="Left" Margin="5,275,0,0" TextWrapping="Wrap" Text="Ведіть номер" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Інфо" HorizontalAlignment="Left" Margin="148,275,0,0" VerticalAlignment="Top" Height="28" Width="94" Click="Button_Click"/>
+        <Button x:Name="ChekButton" Content="Чек" HorizontalAlignment="Left" Margin="268,275,0,0" VerticalAlignment="Top" Height="28" Width="94" Click="ChekButton_Click"/>
+        <ListBox x:Name="DeliverList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,308,438,3" Visibility="Collapsed"/>
+        <Button x:Name="ChangeStatusButton" Content="Взяти" HorizontalAlignment="Left" Margin="388,309,0,0" VerticalAlignment="Top" Height="28" Width="94" Click="ChangeStatusButton_Click" Visibility="Collapsed"/>
+        <Button x:Name="FinishOrderBTN" Content="Закінчити" HorizontalAlignment="Left" Margin="388,356,0,0" VerticalAlignment="Top" Height="28" Width="94" Click="FinishOrderBTN_Click" Visibility="Collapsed"/>
+        <Button x:Name="Deliver" Content="Я Кур'єр" HorizontalAlignment="Left" Margin="660,369,0,0" VerticalAlignment="Top" Click="Deliver_Click" RenderTransformOrigin="0.499,0.254"/>
+
+        <Button x:Name="Back" Content=" Exit " HorizontalAlignment="Left" Margin="702,10,0,0" VerticalAlignment="Top" Height="29" Width="88" Click="Back_Click" />
+        <Label Content="На табло лише активні замовлення!" HorizontalAlignment="Left" Margin="541,289,0,0" VerticalAlignment="Top"/>
+
+
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\bin\Debug\net7.0\Delivery.Core.deps.json
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\bin\Debug\net7.0\Delivery.Core.runtimeconfig.json
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\bin\Debug\net7.0\Delivery.Core.dll
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\bin\Debug\net7.0\Delivery.Core.pdb
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\Delivery.Core.csproj.AssemblyReference.cache
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\Delivery.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\Delivery.Core.AssemblyInfoInputs.cache
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\Delivery.Core.AssemblyInfo.cs
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\Delivery.Core.csproj.CoreCompileInputs.cache
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\Delivery.Core.dll
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\refint\Delivery.Core.dll
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\Delivery.Core.pdb
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\Delivery.Core.genruntimeconfig.cache
+C:\Users\Burch\source\repos\Delivery0\Deliver.Core\obj\Debug\net7.0\ref\Delivery.Core.dll

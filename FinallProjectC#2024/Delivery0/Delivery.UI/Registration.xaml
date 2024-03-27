@@ -1,0 +1,52 @@
+﻿<Window x:Class="Delivery.UI.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delivery.UI"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Registration" Height="600" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <!-- Ресурси для стилів міток -->
+    <Window.Resources>
+        <Style x:Key="WeakStatusStyle" TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Red"/>
+        </Style>
+
+        <Style x:Key="MediumStatusStyle" TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Orange"/>
+        </Style>
+
+        <Style x:Key="StrongStatusStyle" TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Green"/>
+        </Style>
+    </Window.Resources>
+    <!-- Дизайн загальний -->
+    <Grid Background="#ffdadada" Margin="0,0,0,0">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <!-- Ефекти кнопок -->
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Create account" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <Grid Margin="0 0 0 0">
+                    <Button  HorizontalAlignment="Left" Content="Exit" Click="ExitBtn_Click"/>
+                    <Button HorizontalAlignment="Right" Content="Login" Click="LoginBtn_Click" Style="{StaticResource MaterialDesignFlatButton}"/>
+                </Grid>
+                <!-- Бар для введення інформації, деякі додатки -->
+                <TextBox x:Name="txtBoxLogin" materialDesign:HintAssist.Hint="Insert Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox x:Name="passboxInsert" materialDesign:HintAssist.Hint="Insert Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"              PasswordChanged="passboxInsert_PasswordChanged"/>
+                <Label x:Name="labelstatus" Content="" Height="23"/>
+                <PasswordBox x:Name="passboxCheck" materialDesign:HintAssist.Hint="Repeat Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <TextBox x:Name="txtBoxEmail" materialDesign:HintAssist.Hint="Insert Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="txtBoxPhone" materialDesign:HintAssist.Hint="Insert Phone" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button Content="Regestration" Margin="0 20" Click="BtnRegestation_Click" />
+                <Label Content="Do not share your data with anyone" HorizontalAlignment="Center" Margin="0,0,0,0" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

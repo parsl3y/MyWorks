@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AdminPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminSettingsPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CRUD_DEL_PANEL.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CRUD_PANEL_ADMIN.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CRUD_Update_Admin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Menu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OrdersTable.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestouranMap.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReviewsPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AdminPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminSettingsPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CRUD_DEL_PANEL.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CRUD_PANEL_ADMIN.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CRUD_Update_Admin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Menu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OrdersTable.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Registration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RestouranMap.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReviewsPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="Delivery.UI.CRUD_PANEL_ADMIN"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delivery.UI"
+        mc:Ignorable="d"
+        Title="CRUD_PANEL_ADMIN" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="White" Height="450" Width="800">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="#FF1976D2">
+            <TextBlock Text="Страва" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="White"/>
+        </Grid>
+        <Grid Grid.Column="1" Background="#FFE0E0E0">
+            <StackPanel Margin="20">
+                <Label  Content="Назва" FontSize="16" Margin="0 10"/>
+                <TextBox x:Name="NameTxtBox" Text="Введіть назву" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 20"/>
+                <Label  Content="Ціна" FontSize="16" Margin="0 10"/>
+                <TextBox x:Name="PriceTxtBox" Text="Введіть ціну" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 20"/>
+                <Label Content="Фото" FontSize="16" Margin="0 10"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="photoTextBox" Text="" Style="{StaticResource MaterialDesignFloatingHintTextBox}" IsReadOnly="True" Width="150" Margin="0 0 10 0"/>
+                    <Button Content="Обрати" Background="Purple" Click="SelectPhoto_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Button Content="Меню" Click="AdminMenuClick_Click" Background="Purple" Grid.Column="1" Margin="534,395,25,23"/>
+        <Button Content="Створити" Click="CreateDish_Click" Background="Purple" Grid.Column="1" Margin="15,339,18,79" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.429"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>

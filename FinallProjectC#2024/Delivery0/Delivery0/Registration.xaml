@@ -1,0 +1,30 @@
+﻿<Window x:Class="Delivery0.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delivery0"
+        mc:Ignorable="d"
+        Title="Registration" Height="350" Width="400">
+    <Grid Background="#F0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Registration Form" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="24" Grid.Row="0"/>
+
+        <Label Content="Username:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Grid.Row="1"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="150,0,0,0" Width="200" Grid.Row="1"/>
+
+        <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,10,0,0" Grid.Row="2"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="150,10,0,0" Width="200" Grid.Row="2"/>
+
+        <Button Content="Register" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,162" Width="100" Click="RegisterBtn_Click" Grid.Row="3" Background="#007ACC" Foreground="White" Grid.RowSpan="3"/>
+
+    </Grid>
+</Window>

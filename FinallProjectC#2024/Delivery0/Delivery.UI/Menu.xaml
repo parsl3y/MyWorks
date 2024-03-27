@@ -1,0 +1,64 @@
+﻿<Window x:Class="Delivery.UI.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delivery.UI"
+        mc:Ignorable="d"
+        Title="Menu" Height="450" Width="1000" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="201*" />
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="431*"/>
+            <ColumnDefinition Width="160*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Border Grid.Column="1" Background="LightBlue" Grid.ColumnSpan="2">
+            <DataGrid x:Name="MenuDataGrid" Grid.Column="1" Background="LightBlue" Grid.ColumnSpan="2" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Назва страви" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Ціна" Binding="{Binding Price}"/>
+                    <DataGridTemplateColumn Header="Фото страви">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding PhotoPath}" Width="100" Height="100"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Дії">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="Додати" Click="AddButton_Click" Margin="5"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Border>
+
+
+        <Image x:Name="LogoRest" HorizontalAlignment="Left" Height="142" Margin="57,10,0,0" VerticalAlignment="Top" Width="130"/>
+
+        <TextBox x:Name="SearchTxtBox"  Background="White" TextWrapping="Wrap" Text="Назва страви" Margin="0,10,0,392" TextChanged="SearchTxtBox_TextChanged_1" Grid.Column="3"/>
+
+        <Button x:Name="Review" Grid.Column="3" Content="Відгук" HorizontalAlignment="Center" VerticalAlignment="Top" Height="28" Width="140" Margin="0,82,0,0" Click="Review_Click"/>
+        <Button x:Name="CreateOrderButton" Grid.Column="3" Content="Замовлення" HorizontalAlignment="Center" VerticalAlignment="Top" Height="28" Width="140" Margin="0,270,0,0" Click="CreateOrderButton_Click_1"/>
+        <ListBox x:Name="OrdersListBox" Grid.Column="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,157,0,203"/>
+        <TextBox x:Name="PhoneInformationTextBox" Grid.Column="3" HorizontalAlignment="Center" Margin="0,303,0,0" TextWrapping="Wrap" Text="3. Введіть номер" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="AdressTextBox" Grid.Column="3" HorizontalAlignment="Center" Margin="0,346,0,0" TextWrapping="Wrap" Text="4. Введіть адрес" VerticalAlignment="Top" Width="140"/>
+        <Button x:Name="PanelOrderButton" Content="Таблиця замовлень" HorizontalAlignment="Center" VerticalAlignment="Top" Height="28" Width="180" Margin="0,396,0,0" Click="PanelOrderButton_Click" Grid.Column="3" />
+        <ListBox x:Name="ReviewTextListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,266,0,0" SelectionChanged="ReviewTextListBox_SelectionChanged" />
+        <Label x:Name="Rating" Content="Рейтинг" HorizontalAlignment="Left" Margin="73,178,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="RestName" Content="Ресторан" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <Label Grid.Column="3" Content="Крок 1. Створіть замовлення." HorizontalAlignment="Center" Margin="0,247,0,0" VerticalAlignment="Top" Height="24"/>
+        <Label Grid.Column="3" Content="2 .Оберіть створене замовлення ." HorizontalAlignment="Center" Margin="0,133,0,0" VerticalAlignment="Top" Height="24"/>
+
+
+
+    </Grid>
+</Window>
